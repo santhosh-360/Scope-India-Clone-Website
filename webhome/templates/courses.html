@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Courses - SCOPE INDIA{% endblock %}
+
+{% block content %}
+
+<main class="courses_intro">
+
+    <h1 class="hometitle">Courses at SCOPE INDIA</h1>
+
+    <h2 class="homeh2">
+        Center for Advanced Data Science with GenAI, Data Analytics,
+        DevOps, Software, Networking, and Cloud Education
+    </h2>
+
+    <h3 class="homeh3">
+        One of India's best Training destinations for Advanced Data Science
+        with GenAI, Data Analytics, Software, Networking, DevOps, and Cloud
+        Computing courses with 18 years of Industrial experience. Over 1,000
+        students find their dream careers each year, and we have assisted
+        more than 15,000 students so far.
+    </h3>
+
+</main>
+
+
+<!-- GLOBAL CERTIFICATION -->
+
+<section class="course_certification">
+
+    <h4 id="courseh4">
+        Get Globally Certified from SCOPE INDIA
+    </h4>
+
+    <div class="courseimg">
+
+        <img src="{% static 'images/microsoft.png' %}" alt="Microsoft">
+        <img src="{% static 'images/ibm.png' %}" alt="IBM">
+        <img src="{% static 'images/google.png' %}" alt="Google">
+        <img src="{% static 'images/amazon.png' %}" alt="Amazon">
+        <img src="{% static 'images/redhat.png' %}" alt="Red Hat">
+        <img src="{% static 'images/istqb.png' %}" alt="ISTQB">
+        <img src="{% static 'images/cisco.png' %}" alt="Cisco">
+        <img src="{% static 'images/github.png' %}" alt="GitHub">
+
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section class="course_header">
+
+    <div class="course_header_title">
+
+        <h2>
+            Available Courses
+        </h2>
+
+    </div>
+
+
+    <div class="course_links">
+
+        {% for course in courses %}
+
+        <div class="course_item">
+
+            <div class="course_info">
+
+                <h3>
+                    {{ course.course_name }}
+                </h3>
+
+                <div class="course_details">
+
+                    <p>
+                        <strong>Duration:</strong>
+                        {{ course.duration }}
+                    </p>
+
+                    <p>
+                        <strong>Fee:</strong>
+                        ₹{{ course.fee }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a class="signup_btn"
+               href="{% url 'signup_course' course.id %}">
+
+                Sign Up
+                <span>➜</span>
+
+            </a>
+
+        </div>
+
+
+        {% empty %}
+
+        <div class="no_courses">
+
+            <h3>No courses available.</h3>
+
+            <p>
+                Please check back later for available courses.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

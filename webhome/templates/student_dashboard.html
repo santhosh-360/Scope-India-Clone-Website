@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+SCOPE INDIA - Dash Board
+{% endblock %}
+{% block content %}
+
+<h2>Student Dashboard</h2>
+
+<h3>Welcome, {{ student.first_name }}!</h3>
+
+<p>Email: {{ student.email }}</p>
+<p>Phone: {{ student.phone_number }}</p>
+<p>Country: {{ student.country }}</p>
+<p>State: {{ student.state }}</p>
+<p>City: {{ student.city }}</p>
+
+<a href="{% url 'logout' %}">
+    Logout
+</a>
+
+<a href="{% url 'profile_edit' %}">
+    Edit Profile
+</a>
+
+<a href="{% url 'change_password' %}">
+    Change Password
+</a>
+
+<div class="dash_board">
+
+    <h1>Search course</h1>
+
+    <!-- SEARCH COURSES -->
+
+    <section class="search-section">
+
+
+        <form method="GET">
+
+            <input
+                type="text"
+                name="search"
+                placeholder="Search course..."
+                value="{{ search }}"
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- AVAILABLE COURSES -->
+
+    <section class="available-courses">
+
+        <h2>Available Courses</h2>
+
+        {% for course in courses %}
+
+        <div class="course-card">
+
+            <h3>{{ course.course_name }}</h3>
+
+            <p>
+                <strong>Duration:</strong>
+                {{ course.duration }}
+            </p>
+
+            <p>
+                <strong>Fee:</strong>
+                ₹{{ course.fee }}
+            </p>
+
+            <a href="{% url 'signup_course' course.id %}">
+                Sign Up
+            </a>
+
+        </div>
+
+        {% empty %}
+
+        <p>No courses found.</p>
+
+        {% endfor %}
+
+    </section>
+
+<h2>Picked Courses</h2>
+
+{% for enrollment in picked_courses %}
+
+    <div class="picked_course">
+
+        <h3>{{ enrollment.course.course_name }}</h3>
+
+        <p>
+            Duration: {{ enrollment.course.duration }}
+        </p>
+
+        <p>
+            Fee: ₹{{ enrollment.course.fee }}
+        </p>
+
+        <p>Signed up successfully.</p>
+
+        <a
+            href="{% url 'remove_course' enrollment.course.id %}"
+            class="remove_course"
+            onclick="return confirm('Are you sure you want to remove this course?');"
+        >
+            Remove Course
+        </a>
+
+    </div>
+
+{% empty %}
+
+    <p>You have not signed up for any courses yet.</p>
+
+{% endfor %}
+
+    </section>
+
+</div>
+
+{% endblock %}

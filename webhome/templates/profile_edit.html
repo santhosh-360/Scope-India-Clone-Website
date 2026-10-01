@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SCOPE INDIA - My Profile
+{% endblock %}
+
+{% block content %}
+
+<h1>My Profile</h1>
+
+
+{% if form.errors %}
+
+    <div style="color: red;">
+
+        <h3>Please correct these errors:</h3>
+
+        {{ form.errors }}
+
+    </div>
+
+{% endif %}
+
+
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Save Changes
+    </button>
+
+</form>
+
+
+<br>
+
+<a href="{% url 'student_dashboard' %}">
+    Back to Dashboard
+</a>
+
+
+<script>
+
+const country = document.getElementById("id_country");
+const state = document.getElementById("id_state");
+const city = document.getElementById("id_city");
+
+
+/* EXISTING DATABASE VALUES */
+
+const existingCountry = "{{ student.country|escapejs }}";
+const existingState = "{{ student.state|escapejs }}";
+const existingCity = "{{ student.city|escapejs }}";
+
+
+/* LOAD COUNTRIES */
+
+fetch("https://countriesnow.space/api/v0.1/countries")
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.forEach(item => {
+
+            const option = document.createElement("option");
+
+            option.value = item.country;
+            option.textContent = item.country;
+
+            if (item.country === existingCountry) {
+                option.selected = true;
+            }
+
+            country.appendChild(option);
+
+        });
+
+        /*
+        After country is loaded,
+        load the existing state.
+        */
+
+        if (existingCountry !== "") {
+            loadStates(existingCountry);
+        }
+
+    })
+
+    .catch(error => {
+
+        console.log(
+            "Country API Error:",
+            error
+        );
+
+    });
+
+
+/* LOAD STATES */
+
+function loadStates(countryName) {
+
+    state.innerHTML =
+        '<option value="">Select State</option>';
+
+    city.innerHTML =
+        '<option value="">Select City</option>';
+
+
+    fetch(
+        "https://countriesnow.space/api/v0.1/countries/states",
+        {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                country: countryName
+            })
+
+        }
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.states.forEach(item => {
+
+            const option =
+                document.createElement("option");
+
+            option.value = item.name;
+
+            option.textContent = item.name;
+
+            if (item.name === existingState) {
+                option.selected = true;
+            }
+
+            state.appendChild(option);
+
+        });
+
+
+        /*
+        After state is loaded,
+        load the existing city.
+        */
+
+        if (existingState !== "") {
+            loadCities(
+                countryName,
+                existingState
+            );
+        }
+
+    })
+
+    .catch(error => {
+
+        console.log(
+            "State API Error:",
+            error
+        );
+
+    });
+
+}
+
+
+/* LOAD CITIES */
+
+function loadCities(countryName, stateName) {
+
+    city.innerHTML =
+        '<option value="">Select City</option>';
+
+
+    fetch(
+        "https://countriesnow.space/api/v0.1/countries/state/cities",
+        {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                country: countryName,
+
+                state: stateName
+
+            })
+
+        }
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.forEach(cityName => {
+
+            const option =
+                document.createElement("option");
+
+            option.value = cityName;
+
+            option.textContent = cityName;
+
+            if (cityName === existingCity) {
+                option.selected = true;
+            }
+
+            city.appendChild(option);
+
+        });
+
+    })
+
+    .catch(error => {
+
+        console.log(
+            "City API Error:",
+            error
+        );
+
+    });
+
+}
+
+
+/* USER CHANGES COUNTRY */
+
+country.addEventListener("change", function () {
+
+    loadStates(country.value);
+
+});
+
+
+/* USER CHANGES STATE */
+
+state.addEventListener("change", function () {
+
+    loadCities(
+        country.value,
+        state.value
+    );
+
+});
+
+</script>
+
+
+{% endblock %}

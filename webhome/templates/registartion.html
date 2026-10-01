@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SCOPE INDIA - Registration
+{% endblock %}
+
+{% block content %}
+
+<section class="registration_section">
+
+    <div class="registration_container">
+
+        <h1>Student Registration</h1>
+
+        {% if success %}
+            <p class="success_message">
+                {{ success }}
+            </p>
+        {% endif %}
+
+        {% if error %}
+            <p class="error_message">
+                {{ error }}
+            </p>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="registration_form">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="register_btn">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<script>
+
+const country = document.getElementById("id_country");
+const state = document.getElementById("id_state");
+const city = document.getElementById("id_city");
+
+
+/* LOAD COUNTRIES */
+
+fetch("https://countriesnow.space/api/v0.1/countries")
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.forEach(item => {
+
+            const option = document.createElement("option");
+
+            option.value = item.country;
+            option.textContent = item.country;
+
+            country.appendChild(option);
+
+        });
+
+    })
+
+    .catch(error => {
+
+        console.log("Country API Error:", error);
+
+    });
+
+
+/* LOAD STATES */
+
+country.addEventListener("change", function () {
+
+    state.innerHTML =
+        '<option value="">Select State</option>';
+
+    city.innerHTML =
+        '<option value="">Select City</option>';
+
+    if (country.value === "") {
+        return;
+    }
+
+    fetch(
+        "https://countriesnow.space/api/v0.1/countries/states",
+        {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                country: country.value
+            })
+        }
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.states.forEach(item => {
+
+            const option = document.createElement("option");
+
+            option.value = item.name;
+            option.textContent = item.name;
+
+            state.appendChild(option);
+
+        });
+
+    })
+
+    .catch(error => {
+
+        console.log("State API Error:", error);
+
+    });
+
+});
+
+
+/* LOAD CITIES */
+
+state.addEventListener("change", function () {
+
+    city.innerHTML =
+        '<option value="">Select City</option>';
+
+    if (state.value === "") {
+        return;
+    }
+
+    fetch(
+        "https://countriesnow.space/api/v0.1/countries/state/cities",
+        {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                country: country.value,
+                state: state.value
+            })
+        }
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        result.data.forEach(cityName => {
+
+            const option = document.createElement("option");
+
+            option.value = cityName;
+            option.textContent = cityName;
+
+            city.appendChild(option);
+
+        });
+
+    })
+
+    .catch(error => {
+
+        console.log("City API Error:", error);
+
+    });
+
+});
+
+</script>
+
+
+{% endblock %}

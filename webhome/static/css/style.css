@@ -1,0 +1,4982 @@
+/*================ 
+         BASE SECTION
+ =============*/
+
+
+body{
+    padding:0;
+    margin:0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background-image: url(../images/scopeindia-bkg.png), linear-gradient(90deg, rgb(4 11 45) 0%, #04145f 100%);
+    height: 200px;
+}
+
+header #logo{
+    width: 180px;
+    padding: 10px;
+}
+
+header nav{
+    display: block;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #d6d6d6;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+header nav a:hover{
+    color: #eeaf10;
+    background-color: #04145f;
+    border-radius: 5px;
+}
+
+/*======== FOOTER========= */
+
+.section_footer {
+    width: 100%;
+
+    background: #071f6b;
+
+    border-top: 4px solid #e0bd22;
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 20px 30px 25px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* LOCATION */
+
+.footer_location {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* CONTACT DETAILS */
+
+.footer_contact {
+    margin: 0 0 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* COPYRIGHT */
+
+.footer_line {
+    margin: 0;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+
+/* Company name */
+
+.footer_line span {
+    margin: 0 5px;
+}
+
+
+/* LINKS */
+
+.footer_line a {
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 8px;
+
+    transition: 0.3s;
+}
+
+
+.footer_line a:hover {
+    color: #e0bd22;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE VIEW
+   SCOPE INDIA WEBSITE
+===================================================== */
+@media (max-width: 600px) {
+
+    /* ============================
+       HEADER
+    ============================ */
+
+    header {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 15px 10px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    /* Logo */
+
+    header > div {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    #logo {
+
+        width: 160px;
+
+        max-width: 70%;
+
+        height: auto;
+
+        display: block;
+
+    }
+
+/* Navigation */
+    header nav {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-top: 15px;
+
+        box-sizing: border-box;
+    }
+
+    /* Navigation buttons */
+    header nav a {
+        width: 100%;
+        box-sizing: border-box;
+
+        text-align: center;
+
+        padding: 10px 5px;
+
+        font-size: 14px;
+
+        white-space: normal;
+    }
+
+    /* ============================
+       FOOTER
+    ============================ */
+
+    .section_footer {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 25px 12px;
+
+        text-align: center;
+
+    }
+
+
+    /* Location */
+
+    .footer_location {
+
+        margin: 0 auto 18px;
+
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* Phone / Email */
+
+    .footer_contact {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin: 0 auto 18px;
+
+        font-size: 14px;
+
+    }
+
+
+    .footer_contact span {
+
+        display: block;
+
+    }
+
+
+    /* Copyright */
+
+    .footer_line {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 6px;
+
+        margin: 0;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .footer_line span {
+
+        display: block;
+
+    }
+
+
+    .footer_line a {
+
+        display: block;
+
+        margin: 2px 0;
+
+    }
+
+}
+
+/*=================
+         Home page
+    ========================== */
+
+.hometitle{
+        color: #eeaf10;
+    font-size: 35px;
+    background: linear-gradient(60deg, #04145f 0%, rgb(4 13 55) 100%);
+    padding: 7px 15px;
+    display: block;
+    margin: 0px;
+    font-weight: bold;
+    border-top: 1.5px solid #c7ac20;
+    border-bottom: 1.5px solid #c7ac20;
+
+}
+
+.homeh2{
+    color: #14267c;
+    font-size: 180%;
+    display: block;
+    margin: 15px auto;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
+}
+
+.homeh3{
+        color: #0b27a8;
+    /* color: #0b27a8; */
+    font-size: 120%;
+    font-weight: bold;
+    text-align: justify;
+    padding: 15px;
+    margin-top: -21px;
+    margin-bottom: 0px;
+
+}
+
+#courseh4 {
+    color: #0b27a8;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-size: 25px;
+    background: linear-gradient(45deg, #e2e2e2, #fff) !important;
+}
+
+.courseimg {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 25px;
+    margin: 0 !important;
+
+    background: linear-gradient(45deg, #e2e2e2, #fff) !important;
+
+    align-items: center;
+    justify-items: center;
+}
+
+/* Images inside courseimg */
+.courseimg img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Home content */
+
+
+.homecontent {
+    width: 100%;
+    min-height: 550px;
+
+    padding: 55px 6.5% 70px;
+    box-sizing: border-box;
+
+    background: #14267c;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    row-gap: 0;
+}
+
+
+/*MAIN HEADING*/
+
+.homecontent > div:first-child {
+    grid-column: 1 / -1;
+}
+
+#home_element {
+    margin: 0 0 25px 0;
+
+    color: #ffd000;
+
+    font-size: 36px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/*TOP PARAGRAPH*/
+
+.homecontent_top {
+    grid-column: 1;
+
+    max-width: 700px;
+}
+
+.homecontent_top p {
+    margin: 0 0 25px 0;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.40;
+}
+
+
+/* COURSES */
+
+.homecontent_courses {
+    grid-column: 1;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 2.4;
+
+    white-space: pre-line;
+}
+
+.homecontent_courseslist{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+
+    column-gap: 60px;
+    row-gap: 22px;
+
+    width: 100%;
+    align-items: center;
+    justify-items: start;
+
+    margin: 0;
+    text-align: left;
+
+}
+
+
+
+/* ABOUT CONTENT*/
+
+.home_aboutcontent {
+    grid-column: 2;
+
+    grid-row: 2 / span 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    align-self: start;
+
+    margin-top: 0;
+}
+
+
+/*ABOUT BOXES*/
+
+.home_aboutcontent  div {
+    min-height: 165px;
+
+    padding: 25px 24px;
+
+    box-sizing: border-box;
+
+    border: 3px solid #ffd000;
+
+    border-radius: 22px 0 22px 0;
+
+    background: transparent;
+
+    transition: 0.3s ease;
+}
+
+.home_aboutcontent div:hover{
+    transform: scale(1.05);
+}
+
+
+/* BOX HEADING */
+
+.home_aboutcontent h3 {
+    margin: 0 0 14px 0;
+
+    color: #ffd000;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* BOX PARAGRAPH */
+
+.home_aboutcontent p {
+    margin: 0;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+
+
+
+/* Placement Details */
+
+.placement_details {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    /* margin: 30px 0; */
+    text-align: center;
+    color: #0b5aa6;
+}
+
+
+/* Placement Cards Container */
+
+.placement_element {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    padding: 0 50px 30px;
+    box-sizing: border-box;
+}
+
+
+/* Individual Placement Card */
+
+.placement_element > div {
+    background:wheat;
+
+    min-height: 140px;
+
+    padding: 25px 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.placement_element span {
+    margin: 0 0 18px;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #e5a900;
+}
+
+.placement_element p {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #234d72;
+}
+
+/* COURSE SECTION */
+
+.course {
+    width: 100%;
+    background: #071f6b;
+
+    padding: 35px 3% 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/*  MAIN HEADING */
+
+.course_h2 {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #e0aa0c;
+
+    background: #071f6b;
+}
+
+
+.course_h2 h2 {
+    margin: 0;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* STUDY AI BUTTON */
+
+.course_h3 {
+    display: inline-block;
+
+    margin: 0 auto 25px;
+
+    padding: 12px 25px;
+
+    background: linear-gradient(
+        0deg,
+        rgb(187, 151, 39) 3%,
+        rgb(249, 245, 146) 56%,
+        rgb(215, 167, 41) 100%
+    );
+
+    border-radius: 20px 2px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+
+    color: #071f6b;
+}
+
+
+.course_h3 h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/*
+   MAIN CONTENT
+   LEFT IMAGE + RIGHT TABLE */
+
+.course_content {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-top: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* LEFT SIDE IMAGES */
+
+.course_images {
+    width: 52%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* Robot */
+
+.robo_img {
+    width: 43%;
+    height: auto;
+    object-fit: contain;
+
+    animation: roboMove 4s ease-in-out infinite;
+}
+
+
+/* Robot animation */
+
+@keyframes roboMove {
+
+    0% {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(-20px);
+    }
+
+}
+
+
+/* Data Science Image */
+
+.datascience_img {
+    width: 95%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* COURSE TABLE */
+
+.course_table {
+    width: 48%;
+
+    min-height: 390px;
+
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 50px;
+
+    row-gap: 30px;
+
+    align-items: center;
+
+    background: #071f6b;
+
+    border: 2px solid #e6c92f;
+
+    border-radius: 25px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    text-align: left;
+}
+
+
+/* EACH COURSE */
+
+.course_table div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    line-height: 1.3;
+}
+
+
+/* Yellow check mark */
+
+.course_table div {
+    color: #e6c92f;
+}
+
+
+/* Course text */
+
+.course_table span {
+    color: white;
+}
+
+
+/* BOTTOM DESCRIPTION */
+
+.course_data {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 0 5%;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.course_data p {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+/* FULL STACK SECTION */
+
+.section_fullstack {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 40px 4% 50px;
+
+    box-sizing: border-box;
+}
+
+
+/*  MAIN HEADING */
+
+.fullstack_h2 {
+    width: 100%;
+
+    margin-bottom: 60px;
+
+    padding-left: 20px;
+
+    box-sizing: border-box;
+}
+
+
+.fullstack_h2 h2 {
+    margin: 0;
+
+    color: #071f6b;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    text-align: left;
+}
+
+
+/*  MAIN CONTENT */
+
+.fullstack_content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/*  PATHWAY CARD */
+
+.pathway_card {
+    width: 100%;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+
+/* Card heading */
+
+.pathway_card h2 {
+    margin: 0 0 30px 0;
+
+    color: #111111;
+
+    font-size: 27px;
+
+    font-weight: bold;
+}
+
+
+/*  NUMBER + TITLE */
+
+.pathway_title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+
+/* Number circle */
+
+.number {
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8c600;
+
+    color: #111111;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* Foundation / Front End / Back End */
+
+.title {
+    color: #111111;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/*  PATHWAY DESCRIPTION */
+
+.pathway_text {
+    margin-left: 58px;
+
+    margin-top: 5px;
+
+    margin-bottom: 15px;
+
+    color: #555555;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/*  FULL STACK IMAGE */
+
+.Fullstack_img {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.Fullstack_img img {
+    width: 100%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* SOFTWARE TESTING SECTION */
+
+.section_softwaretesting {
+    width: 100%;
+
+    background: #071f6b;
+
+    padding: 45px 4% 35px;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+
+/*  MAIN HEADING */
+
+.softwaretesting_h2 {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.softwaretesting_h2 h2 {
+    margin: 0;
+
+    font-size: 43px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    color: white;
+}
+
+
+/* Yellow words */
+
+.softwaretesting_h2 h2 span {
+    color: #f2c500;
+}
+
+
+/* MAIN CONTENT */
+
+.maindiv_testing {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+    box-sizing: border-box;
+}
+
+
+/*  LEFT IMAGE */
+
+.testing_image {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.testing_image img {
+    width: 100%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/*  RIGHT CONTENT */
+
+.testing_content {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/*  RIGHT HEADING */
+
+.testing_content h4 {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 40px;
+
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        180deg,
+        #ffd21a,
+        #f0b900
+    );
+
+    color: #071f6b;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.25);
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    line-height: 1.3;
+}
+
+
+/*   TESTING LIST */
+
+.testing_list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 45px;
+
+    row-gap: 30px;
+
+    width: 100%;
+}
+
+
+/* Individual item */
+
+.testing_list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/*  CHECK MARK */
+
+.check {
+    color: #f2c500;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* BOTTOM TEXT */
+
+.testing_p {
+    width: 100%;
+
+    margin-top: 45px;
+
+    text-align: center;
+}
+
+
+.testing_p p {
+    margin: 0;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* SCOPE INDIA */
+
+.testing_p span {
+    color: #f2c500;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+/* DEVOPS SECTION */
+
+.section_devops {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 45px 3% 55px;
+
+    box-sizing: border-box;
+}
+
+
+/*  HEADING */
+
+.devops_h2 {
+    width: 100%;
+
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+
+.devops_h2 h2 {
+    margin: 0;
+
+    color: #071f6b;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* MAIN CONTENT */
+
+.devops_content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* LEFT DEVOPS CARD */
+
+.maindiv_devops {
+    width: 100%;
+
+    min-height: 370px;
+
+    padding: 40px 30px;
+
+    background: #eeeeee;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.18);
+
+    box-sizing: border-box;
+}
+
+
+/*  CARD HEADING */
+
+.maindiv_devops h4 {
+    display: inline-block;
+
+    margin: 0 0 30px;
+
+    padding: 12px 25px;
+
+    background: linear-gradient(
+        90deg,
+        #e60073,
+        #d90068
+    );
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    border-radius: 0 25px 25px 0;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+
+/* DEVOPS LIST */
+
+.devops_list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 50px;
+
+    row-gap: 35px;
+}
+
+
+/* Individual item */
+
+.devops_list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #071f6b;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* TICK MARK */
+
+.tick_mark {
+    color: #d80072;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* RIGHT IMAGE */
+
+.devops_img {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.devops_img img {
+    width: 100%;
+
+    max-width: 720px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+}
+
+/* BUSINESS INTELLIGENCE SECTION */
+
+.section_businessintelligence {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 45px 4% 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* MAIN HEADING */
+
+.bi_h2 {
+    width: 100%;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+
+.bi_h2 h2 {
+    margin: 0;
+
+    color: #071f6b;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* MAIN CONTENT */
+
+.bi_content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* LEFT POWER BI IMAGE */
+
+.bi_img {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.bi_img img {
+    width: 100%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* RIGHT CONTENT */
+
+.maindiv_bi {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* POWER BI HEADING */
+
+.maindiv_bi h4 {
+    width: 100%;
+
+    margin: 0 0 40px;
+
+    padding: 13px 20px;
+
+    background: linear-gradient(
+        180deg,
+        #ffd21a,
+        #f0b900
+    );
+
+    color: #071f6b;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.15);
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    line-height: 1.3;
+
+    box-sizing: border-box;
+}
+
+
+/* BI LIST */
+
+.bi_list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 45px;
+
+    row-gap: 35px;
+}
+
+
+/* Individual item */
+
+.bi_list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: #222222;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/*  CHECK MARK */
+
+.bi_mark {
+    color: #d5aa18;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* OUR MISSION & VISION */
+
+.section_ourmission {
+    width: 100%;
+
+    background: #071f6b;
+
+    padding: 55px 4% 60px;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+
+/*  MAIN HEADING */
+
+.ourmission_heading {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.ourmission_heading h2 {
+    margin: 0;
+
+    color: #f2c500;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* TWO CARDS CONTAINER */
+
+.mission_vision_container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    box-sizing: border-box;
+}
+
+
+/*  COMMON CARD STYLE */
+
+.ourmission_div,
+.ourvision_div {
+    width: 100%;
+
+    min-height: 450px;
+
+    padding: 35px;
+
+    background: #0b2678;
+
+    border: 2px solid #d6b62c;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ICON */
+
+.mission_icon {
+    width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5b900;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 34px;
+
+    margin-bottom: 25px;
+}
+
+
+/* CARD HEADING */
+
+.ourmission_div h2,
+.ourvision_div h2 {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+/*  DESCRIPTION */
+
+.ourmission_div p,
+.ourvision_div p {
+    margin: 0 0 25px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+
+/* POINTS */
+
+.mission_point {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/*  CHECK MARK */
+
+.mission_mark {
+    color: #f2c500;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SCOPE INDIA HOME PAGE
+  
+========================================================= */
+
+
+
+
+@media (max-width: 600px) {
+
+
+    /* =====================================================
+       GENERAL
+    ===================================================== */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HOME INTRODUCTION
+    ===================================================== */
+
+    main {
+
+        width: 100%;
+
+        padding: 35px 18px;
+
+        text-align: center;
+
+    }
+
+
+    .hometitle {
+
+        font-size: 32px;
+
+        line-height: 1.2;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .homeh2 {
+
+        font-size: 19px;
+
+        line-height: 1.5;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .homeh3 {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        font-weight: normal;
+
+    }
+
+
+    /* =====================================================
+       CERTIFICATION SECTION
+    ===================================================== */
+
+    .course_section {
+
+        width: 100%;
+
+        padding: 30px 15px;
+
+        text-align: center;
+
+    }
+
+
+    #courseh4 {
+
+        font-size: 22px;
+
+        line-height: 1.4;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .courseimg {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+        align-items: center;
+
+        justify-items: center;
+
+    }
+
+
+    .courseimg img {
+
+        width: 100%;
+
+        max-width: 130px;
+
+        height: auto;
+
+        object-fit: contain;
+
+    }
+
+
+    /* =====================================================
+       DREAMING ABOUT CAREER
+    ===================================================== */
+
+    .homecontent {
+
+        width: 100%;
+
+        padding: 40px 18px;
+
+        text-align: center;
+
+    }
+
+
+    #home_element {
+
+        font-size: 28px;
+
+        line-height: 1.3;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .homecontent_top {
+
+        width: 100%;
+
+    }
+
+
+    .homecontent_top p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       COURSE LIST
+    ===================================================== */
+
+    .homecontent_courses {
+
+        width: 100%;
+
+        margin-top: 25px;
+
+        font-size: 17px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .homecontent_courseslist {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 20px;
+
+        text-align: left;
+
+    }
+
+
+    .homecontent_courseslist > * {
+
+        padding: 8px 5px;
+
+    }
+
+
+    /* =====================================================
+       CLASSES / PLACEMENT / TRAINING / INTERNSHIP
+    ===================================================== */
+
+    .home_aboutcontent {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 35px;
+
+    }
+
+
+    .home_aboutcontent > div {
+
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+    .home_aboutcontent h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .home_aboutcontent p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+
+    /* =====================================================
+       PLACEMENT HIGHLIGHTS
+    ===================================================== */
+
+    .placement {
+
+        width: 100%;
+
+        padding: 35px 15px;
+
+        text-align: center;
+
+    }
+
+
+    .placement_details {
+
+        margin: 0 0 25px;
+
+    }
+
+
+    .placement_details h2 {
+
+        font-size: 28px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .placement_element {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .placement_element > div {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .placement_element span {
+
+        font-size: 32px;
+
+    }
+
+
+    .placement_element p {
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* =====================================================
+       ARTIFICIAL INTELLIGENCE SECTION
+    ===================================================== */
+
+    .course {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+        text-align: center;
+
+    }
+
+
+    .course_h2 h2 {
+
+        font-size: 28px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .course_h3 h3 {
+
+        font-size: 20px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .course_content {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    /* AI images */
+
+    .course_images {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+    }
+
+
+    .robo_img {
+
+        width: 180px;
+
+        max-width: 70%;
+
+        height: auto;
+
+    }
+
+
+    .datascience_img {
+
+        width: 100%;
+
+        max-width: 400px;
+
+        height: auto;
+
+    }
+
+
+    /* AI course list */
+
+    .course_table {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .course_table > div {
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        text-align: left;
+
+    }
+
+
+    .course_table span {
+
+        font-size: 15px;
+
+    }
+
+
+    .course_data {
+
+        margin-top: 25px;
+
+    }
+
+
+    .course_data p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       FULL STACK SECTION
+    ===================================================== */
+
+    .section_fullstack {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+    }
+
+
+    .fullstack_h2 h2 {
+
+        font-size: 28px;
+
+        text-align: center;
+
+        line-height: 1.3;
+
+    }
+
+
+    .fullstack_content {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    .pathway_card {
+
+        width: 100%;
+
+    }
+
+
+    .pathway_card h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .pathway_title {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+
+    .pathway_text {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .Fullstack_img {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .Fullstack_img img {
+
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+    }
+
+
+    /* =====================================================
+       SOFTWARE TESTING
+    ===================================================== */
+
+    .section_softwaretesting {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+    }
+
+
+    .softwaretesting_h2 h2 {
+
+        font-size: 28px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+    }
+
+
+    .maindiv_testing {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    .testing_image {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .testing_image img {
+
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+    }
+
+
+    .testing_content {
+
+        width: 100%;
+
+    }
+
+
+    .testing_content h4 {
+
+        font-size: 21px;
+
+        line-height: 1.5;
+
+        text-align: center;
+
+    }
+
+
+    .testing_list {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .testing_list > div {
+
+        padding: 10px;
+
+        text-align: left;
+
+    }
+
+
+    .testing_p p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        text-align: center;
+
+    }
+
+
+    /* =====================================================
+       DEVOPS
+    ===================================================== */
+
+    .section_devops {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+    }
+
+
+    .devops_h2 h2 {
+
+        font-size: 28px;
+
+        text-align: center;
+
+    }
+
+
+    .devops_content {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    .maindiv_devops {
+
+        width: 100%;
+
+    }
+
+
+    .maindiv_devops h4 {
+
+        font-size: 21px;
+
+        text-align: center;
+
+    }
+
+
+    .devops_list {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .devops_list > div {
+
+        padding: 10px;
+
+        text-align: left;
+
+    }
+
+
+    .devops_img {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .devops_img img {
+
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+    }
+
+
+    /* =====================================================
+       BUSINESS INTELLIGENCE
+    ===================================================== */
+
+    .section_businessintelligence {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+    }
+
+
+    .bi_h2 h2 {
+
+        font-size: 28px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+    }
+
+
+    .bi_content {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+
+    .bi_img {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .bi_img img {
+
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+    }
+
+
+    .maindiv_bi {
+
+        width: 100%;
+
+    }
+
+
+    .maindiv_bi h4 {
+
+        font-size: 21px;
+
+        text-align: center;
+
+    }
+
+
+    .bi_list {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .bi_list > div {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 10px;
+
+        text-align: left;
+
+    }
+
+
+    .bi_mark {
+
+        flex-shrink: 0;
+
+    }
+
+
+    /* =====================================================
+       MISSION & VISION
+    ===================================================== */
+
+    .section_ourmission {
+
+        width: 100%;
+
+        padding: 40px 15px;
+
+    }
+
+
+    .ourmission_heading h2 {
+
+        font-size: 30px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+    }
+
+
+    .mission_vision_container {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    .ourmission_div,
+    .ourvision_div {
+
+        width: 100%;
+
+        padding: 25px 20px;
+
+    }
+
+
+    .ourmission_div h2,
+    .ourvision_div h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .ourmission_div p,
+    .ourvision_div p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .mission_point {
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        margin-bottom: 12px;
+
+        font-size: 14px;
+
+    }
+
+
+    .mission_mark {
+
+        flex-shrink: 0;
+
+    }
+
+}
+
+
+
+/* =========================================
+   COURSE SECTION
+========================================= */
+
+.course_links {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    margin: 25px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   COURSE CARD
+   ========================================================= */
+
+.course_item {
+
+    background: #ffffff;
+
+    border: 3px solid #d7bd32;
+
+    border-radius: 12px;
+
+    min-height: 180px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.course_item:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+
+    border-color: #ffd21c;
+
+}
+
+
+/* ---------- COURSE NAME ---------- */
+
+.course_info h3 {
+
+    color: #071b63;
+
+    font-size: 22px;
+
+    margin: 0 0 18px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ---------- DETAILS ---------- */
+
+.course_details {
+
+    color: #333333;
+
+}
+
+
+.course_details p {
+
+    margin: 8px 0;
+
+    font-size: 16px;
+
+}
+
+
+.course_details strong {
+
+    color: #071b63;
+
+}
+
+
+/* =========================================================
+   SIGN UP BUTTON
+   ========================================================= */
+
+.signup_btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background: #071b63;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    border: 2px solid #071b63;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.signup_btn span {
+
+    font-size: 20px;
+
+}
+
+
+.signup_btn:hover {
+
+    background: #ffd21c;
+
+    color: #071b63;
+
+    border-color: #ffd21c;
+
+}
+
+
+/* =========================================================
+   NO COURSES
+   ========================================================= */
+
+.no_courses {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    background: white;
+
+    border: 3px solid #d7bd32;
+
+    border-radius: 10px;
+
+    padding: 50px 20px;
+
+}
+
+
+.no_courses h3 {
+
+    color: #071b63;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.no_courses p {
+
+    color: #555;
+
+    font-size: 16px;
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* INTRO */
+
+    .courses_intro {
+
+        padding: 35px 18px;
+
+    }
+
+
+    .courses_intro .hometitle {
+
+        font-size: 30px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .courses_intro .homeh2 {
+
+        font-size: 19px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .courses_intro .homeh3 {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* CERTIFICATION */
+
+    .course_certification {
+
+        padding: 25px 15px 30px;
+
+    }
+
+
+    #courseh4 {
+
+        font-size: 23px;
+
+        line-height: 1.4;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    /* LOGOS */
+
+    .courseimg {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .courseimg img {
+
+        max-width: 120px;
+
+        width: 100%;
+
+        height: 65px;
+
+    }
+
+
+    /* COURSE TITLE */
+
+    .course_header_title {
+
+        padding: 15px 12px;
+
+    }
+
+
+    .course_header_title h2 {
+
+        font-size: 23px;
+
+        line-height: 1.4;
+
+    }
+
+
+    /* COURSE CARDS */
+
+    .course_links {
+
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .course_item {
+
+        min-height: auto;
+
+        padding: 20px;
+
+    }
+
+
+    .course_info h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    .course_details p {
+
+        font-size: 15px;
+
+    }
+
+
+    .signup_btn {
+
+        font-size: 16px;
+
+        padding: 11px 15px;
+
+    }
+
+}
+
+/* ============================= */
+/* ABOUT SCOPE INDIA */
+/* ============================= */
+
+.about_scopeindia {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #10257d;
+
+    color: white;
+
+    padding: 55px 6% 40px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Main heading */
+
+.about_scopeindia h2 {
+    margin: 0 0 35px;
+
+    text-align: center;
+
+    color: #ffd21c;
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* Introduction */
+
+.about_scopeindia h3 {
+    margin: 0 auto 40px;
+
+    max-width: 1400px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+
+/* Paragraphs */
+
+.about_scopeindia p {
+    max-width: 1350px;
+
+    margin: 0 auto 30px;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.75;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+}
+
+
+/* Rating section */
+
+.about_rating {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+
+/* 5 star image */
+
+.about_rating img {
+    display: block;
+
+    width: 270px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Rating text */
+
+.about_rating h4 {
+    margin: 8px 0 0;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ABOUT */
+
+    .about_scopeindia {
+        padding: 35px 18px;
+    }
+
+
+    .about_scopeindia > h2 {
+        font-size: 27px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+
+    .about_scopeindia > h3 {
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+
+    .about_scopeindia > p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+
+    /* RATING */
+
+    .about_rating {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+
+    .about_rating img {
+        width: 130px;
+    }
+
+
+    .about_rating h4 {
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       CERTIFICATION
+       ===================================================== */
+
+    .course {
+        padding: 25px 15px 30px;
+    }
+
+
+    #courseh4 {
+        font-size: 22px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+
+    .courseimg {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .courseimg img {
+        width: 100%;
+        max-width: 120px;
+        height: 65px;
+    }
+
+
+    /* =====================================================
+       MISSION & VISION
+       ===================================================== */
+
+    .section_ourmission {
+        padding: 35px 15px;
+    }
+
+
+    .ourmission_heading {
+        margin-bottom: 25px;
+    }
+
+
+    .ourmission_heading h2 {
+        font-size: 23px;
+
+        padding: 13px 20px;
+
+        width: auto;
+    }
+
+
+    /* One card per row */
+
+    .mission_vision_container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .ourmission_div,
+    .ourvision_div {
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .mission_icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 23px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .ourmission_div h2,
+    .ourvision_div h2 {
+        font-size: 23px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .ourmission_div p,
+    .ourvision_div p {
+        font-size: 15px;
+
+        line-height: 1.75;
+
+        text-align: left;
+    }
+
+
+    .mission_point {
+        font-size: 14px;
+
+        gap: 10px;
+
+        margin: 12px 0;
+    }
+
+
+    .mission_mark {
+        width: 23px;
+        height: 23px;
+
+        min-width: 23px;
+    }
+
+}
+
+
+/* =========================================
+   STUDENT REGISTRATION
+   
+========================================= */
+
+.registration_section {
+    width: 100%;
+    min-height: 100vh;
+    background: #07196b;
+    padding: 60px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Registration box */
+
+.registration_container {
+    width: 100%;
+    max-width: 850px;
+
+    background: #ffffff;
+
+    border: 4px solid #e5bd19;
+    border-radius: 18px;
+
+    padding: 40px 50px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Heading */
+
+.registration_container h1 {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #07196b;
+}
+
+
+/* Django form paragraphs */
+
+.registration_form p {
+    margin: 0 0 20px;
+}
+
+
+/* Labels */
+
+.registration_form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #07196b;
+}
+
+
+/* Text inputs */
+
+.registration_form input[type="text"],
+.registration_form input[type="email"],
+.registration_form input[type="password"],
+.registration_form input[type="number"],
+.registration_form input[type="tel"],
+.registration_form input[type="date"],
+.registration_form select,
+.registration_form textarea {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #d5b52a;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Textarea */
+
+.registration_form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* File input */
+
+.registration_form input[type="file"] {
+
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #d5b52a;
+
+    border-radius: 8px;
+
+    background: #f8f8f8;
+
+    font-size: 15px;
+}
+
+
+/* Focus effect */
+
+.registration_form input:focus,
+.registration_form select:focus,
+.registration_form textarea:focus {
+
+    border-color: #07196b;
+
+    box-shadow: 0 0 0 3px rgba(7, 25, 107, 0.12);
+}
+
+
+/* Select */
+
+.registration_form select {
+    cursor: pointer;
+}
+
+
+/* Checkbox */
+
+.registration_form input[type="checkbox"] {
+
+    width: 18px;
+    height: 18px;
+
+    accent-color: #07196b;
+
+    margin-right: 8px;
+}
+
+
+/* Radio button */
+
+.registration_form input[type="radio"] {
+
+    accent-color: #07196b;
+
+    margin-right: 6px;
+}
+
+
+/* Help text */
+
+.registration_form .helptext {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* Error messages */
+
+.registration_form .errorlist {
+
+    margin: 5px 0 8px;
+
+    padding: 0;
+
+    list-style: none;
+
+    color: #d00000;
+
+    font-size: 14px;
+}
+
+
+/* Success message */
+
+.success_message {
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #dff6e5;
+
+    border: 1px solid #38a169;
+
+    color: #16743a;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* Error message */
+
+.error_message {
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #ffe3e3;
+
+    border: 1px solid #dc3545;
+
+    color: #b00020;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* Register button */
+
+.register_btn {
+
+    display: block;
+
+    width: 220px;
+
+    margin: 30px auto 0;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #e5bd19;
+
+    color: #07196b;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+.register_btn:hover {
+
+    background: #07196b;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .registration_section {
+
+        padding: 30px 15px;
+
+    }
+
+    .registration_container {
+
+        padding: 30px 25px;
+
+        border-radius: 12px;
+
+    }
+
+    .registration_container h1 {
+
+        font-size: 30px;
+
+    }
+
+    .registration_form label {
+
+        font-size: 15px;
+
+    }
+
+    .registration_form input[type="text"],
+    .registration_form input[type="email"],
+    .registration_form input[type="password"],
+    .registration_form input[type="number"],
+    .registration_form input[type="tel"],
+    .registration_form input[type="date"],
+    .registration_form select,
+    .registration_form textarea {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SCOPE INDIA - CONTACT PAGE
+   ========================================================= */
+
+.contact_section {
+    background: linear-gradient(135deg, #071b63, #0b2b8f);
+    color: white;
+    text-align: center;
+    padding: 70px 8%;
+    margin: 0;
+}
+
+.contact_section h1 {
+    font-size: 42px;
+    margin: 0 0 20px;
+    color: #ffd21c;
+    font-weight: 700;
+}
+
+.contact_section h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 auto 20px;
+    max-width: 1000px;
+    color: white;
+}
+
+.contact_section h3 {
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 400;
+    max-width: 1000px;
+    margin: auto;
+    color: #f2f2f2;
+}
+
+
+/* =========================================================
+   CONTACT LOCATION CARD
+   ========================================================= */
+
+#contact {
+    width: 85%;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-top: 6px solid #ffd21c;
+    text-align: center;
+}
+
+#contact h4 {
+    font-size: 28px;
+    color: #071f6b;
+    margin: 0 0 20px;
+}
+
+#contact address {
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+   ========================================================= */
+
+.footer_links {
+    display: inline-block;
+    margin: 8px 5px;
+    padding: 12px 20px;
+    background: #071f6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.footer_links:hover {
+    background: #ffd21c;
+    color: #071f6b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACT FORM SECTION
+   ========================================================= */
+
+.contact_section + section + section {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto 70px;
+    padding: 45px;
+    background: #f7f9ff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.contact_section + section + section h1 {
+    text-align: center;
+    color: #071f6b;
+    font-size: 34px;
+    margin: 0 0 30px;
+    position: relative;
+}
+
+
+/* Golden line below Contact Us */
+
+.contact_section + section + section h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffd21c;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   DJANGO FORM
+   ========================================================= */
+
+.contact_section + section + section form {
+    width: 100%;
+}
+
+.contact_section + section + section form p {
+    margin-bottom: 20px;
+}
+
+
+/* Form labels */
+
+.contact_section + section + section form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #071f6b;
+    font-size: 16px;
+}
+
+
+/* Input fields */
+
+.contact_section + section + section form input,
+.contact_section + section + section form textarea,
+.contact_section + section + section form select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d5dbea;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+
+/* Textarea */
+
+.contact_section + section + section form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* Input focus */
+
+.contact_section + section + section form input:focus,
+.contact_section + section + section form textarea:focus,
+.contact_section + section + section form select:focus {
+    border-color: #071f6b;
+    box-shadow: 0 0 0 3px rgba(7, 31, 107, 0.10);
+}
+
+
+/* =========================================================
+   SEND EMAIL BUTTON
+   ========================================================= */
+
+.contact_section + section + section form button {
+    display: block;
+    width: 220px;
+    margin: 30px auto 0;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #ffd21c;
+    color: #071f6b;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact_section + section + section form button:hover {
+    background: #071f6b;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(7, 31, 107, 0.25);
+}
+
+
+/* =========================================================
+   SUCCESS / MESSAGE
+   ========================================================= */
+
+.contact_section + section + section > p {
+    text-align: center;
+    background: #e9f8ee;
+    color: #16733a;
+    padding: 12px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   MOBILE VIEW
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact_section {
+        padding: 45px 20px;
+    }
+
+    .contact_section h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .contact_section h2 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .contact_section h3 {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* Location card */
+
+    #contact {
+        width: 92%;
+        margin: 35px auto;
+        padding: 28px 18px;
+        border-radius: 14px;
+    }
+
+    #contact h4 {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    #contact address {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Contact buttons */
+
+    .footer_links {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+
+    /* Contact form */
+
+    .contact_section + section + section {
+        width: 92%;
+        margin-bottom: 45px;
+        padding: 30px 18px;
+        border-radius: 14px;
+    }
+
+    .contact_section + section + section h1 {
+        font-size: 27px;
+    }
+
+    .contact_section + section + section form input,
+    .contact_section + section + section form textarea,
+    .contact_section + section + section form select {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .contact_section + section + section form button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+
+
+/* =====================================================
+   SCOPE INDIA - LOGIN PAGE
+   ===================================================== */
+
+.login_container {
+    width: 420px;
+    max-width: 90%;
+    margin: 70px auto;
+    padding: 40px 35px;
+
+    background: white;
+    border-radius: 18px;
+
+    border-top: 6px solid #ffd21c;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   LOGIN TITLE
+   ===================================================== */
+
+.login_container h2 {
+    text-align: center;
+    color: #071f6b;
+    font-size: 30px;
+    margin: 0 0 30px;
+    font-weight: 700;
+}
+
+.login_container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+
+    background: #ffd21c;
+
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.login_container form {
+    width: 100%;
+}
+
+.login_container form > div {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   LABEL
+   ===================================================== */
+
+.login_container label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #071f6b;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.login_container input[type="email"],
+.login_container input[type="password"] {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d3d8e5;
+    border-radius: 8px;
+
+    background: #fafbff;
+
+    font-size: 16px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Input focus */
+
+.login_container input[type="email"]:focus,
+.login_container input[type="password"]:focus {
+    border-color: #071f6b;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(7, 31, 107, 0.10);
+}
+
+
+/* =====================================================
+   REMEMBER ME
+   ===================================================== */
+
+.login_container form > div:nth-child(3) {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.login_container form > div:nth-child(3) label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.login_container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #071f6b;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+   ===================================================== */
+
+.login_container button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #071f6b;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+.login_container button:hover {
+    background: #ffd21c;
+    color: #071f6b;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(7, 31, 107, 0.25);
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+.login_container p {
+    text-align: center;
+
+    margin: 20px 0 0;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.login_container p a {
+    color: #071f6b;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.login_container p a:hover {
+    color: #d39b00;
+
+    text-decoration: underline;
+}
+
+
+/* Forgot password */
+
+.login_container p:last-child {
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   PAGE BACKGROUND
+   ===================================================== */
+
+body {
+    background: #f4f7fc;
+}
+
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .login_container {
+        width: 90%;
+
+        max-width: 400px;
+
+        margin: 40px auto;
+
+        padding: 30px 22px;
+
+        border-radius: 15px;
+    }
+
+    .login_container h2 {
+        font-size: 25px;
+
+        margin-bottom: 25px;
+    }
+
+    .login_container form > div {
+        margin-bottom: 17px;
+    }
+
+    .login_container input[type="email"],
+    .login_container input[type="password"] {
+        padding: 13px;
+
+        font-size: 15px;
+    }
+
+    .login_container button {
+        padding: 13px;
+
+        font-size: 16px;
+    }
+
+    .login_container p {
+        font-size: 13px;
+    }
+}
+
+
+
+/* =====================================================
+   STUDENT DASHBOARD - MAIN PAGE
+   ===================================================== */
+
+.dash_board {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   DASHBOARD TOP CONTENT
+   ===================================================== */
+
+/* These elements are before .dash_board */
+
+body {
+    background: #f4f7fc;
+    margin: 0;
+}
+
+
+/* Student Dashboard heading */
+
+body > h2 {
+    background: linear-gradient(135deg, #071b63, #0b2b8f);
+    color: #ffd21c;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 45px 20px 10px;
+
+    font-size: 36px;
+}
+
+
+/* Welcome text */
+
+body > h3 {
+    background: linear-gradient(135deg, #071b63, #0b2b8f);
+
+    color: white;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 5px 20px 25px;
+
+    font-size: 20px;
+}
+
+
+/* Student details */
+
+body > p {
+    background: white;
+
+    width: 80%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 7px 20px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   TOP NAVIGATION LINKS
+   ===================================================== */
+
+body > a {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    padding: 11px 18px;
+
+    background: #071f6b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* First link */
+
+body > a:first-of-type {
+    margin-left: calc(50% - 185px);
+}
+
+
+/* Hover */
+
+body > a:hover {
+    background: #ffd21c;
+    color: #071f6b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SEARCH COURSE HEADING
+   ===================================================== */
+
+.dash_board > h1 {
+    text-align: center;
+
+    color: #071f6b;
+
+    font-size: 34px;
+
+    margin: 45px 0 25px;
+}
+
+
+/* =====================================================
+   SEARCH SECTION
+   ===================================================== */
+
+.search-section {
+    width: 100%;
+
+    background: white;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    border-radius: 16px;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 45px;
+}
+
+
+.search-section form {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.search-section input {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d5dbe7;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+
+.search-section input:focus {
+    border-color: #071f6b;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 31, 107, 0.10);
+}
+
+
+.search-section button {
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #071f6b;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.search-section button:hover {
+    background: #ffd21c;
+
+    color: #071f6b;
+}
+
+
+/* =====================================================
+   AVAILABLE COURSES
+   ===================================================== */
+
+.available-courses {
+    width: 100%;
+}
+
+
+.available-courses > h2 {
+    text-align: center;
+
+    color: #071f6b;
+
+    font-size: 30px;
+
+    margin: 0 0 25px;
+}
+
+
+/* =====================================================
+   COURSE CARD
+   ===================================================== */
+
+.course-card {
+    background: white;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border-top: 5px solid #ffd21c;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.course-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+
+.course-card h3 {
+    color: #071f6b;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    margin: 0 0 20px;
+}
+
+
+.course-card p {
+    text-align: center;
+
+    color: #555;
+
+    font-size: 15px;
+
+    margin: 10px 0;
+}
+
+
+.course-card strong {
+    color: #071f6b;
+}
+
+
+/* =====================================================
+   SIGN UP BUTTON
+   ===================================================== */
+
+.course-card > a {
+    display: block;
+
+    width: 160px;
+
+    margin: 22px auto 0;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #071f6b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.course-card > a:hover {
+    background: #ffd21c;
+
+    color: #071f6b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NO COURSES
+   ===================================================== */
+
+.available-courses > p {
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    color: #666;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =====================================================
+   PICKED COURSES HEADING
+   ===================================================== */
+
+.dash_board > h2 {
+    text-align: center;
+
+    color: #071f6b;
+
+    font-size: 30px;
+
+    margin: 60px 0 25px;
+}
+
+
+/* =====================================================
+   PICKED COURSE CARD
+   ===================================================== */
+
+.picked_course {
+    background: white;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border-left: 5px solid #ffd21c;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.picked_course:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+.picked_course h3 {
+    color: #071f6b;
+
+    font-size: 21px;
+
+    margin: 0 0 18px;
+}
+
+
+.picked_course p {
+    color: #555;
+
+    font-size: 15px;
+
+    margin: 10px 0;
+}
+
+
+/* Success message */
+
+.picked_course p:nth-of-type(3) {
+    color: #16803c;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   REMOVE COURSE BUTTON
+   ===================================================== */
+
+.remove_course {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 11px 18px;
+
+    background: #ffe8e8;
+
+    color: #c62828;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.remove_course:hover {
+    background: #c62828;
+
+    color: white;
+}
+
+
+/* =====================================================
+   NO PICKED COURSES
+   ===================================================== */
+
+.dash_board > p {
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #666;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* Dashboard heading */
+
+    body > h2 {
+        font-size: 27px;
+
+        padding: 35px 15px 10px;
+    }
+
+
+    body > h3 {
+        font-size: 17px;
+
+        padding: 5px 15px 25px;
+    }
+
+
+    /* Student information */
+
+    body > p {
+        width: 92%;
+
+        padding: 6px 10px;
+
+        font-size: 14px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Top buttons */
+
+    body > a {
+        display: block;
+
+        width: 90%;
+
+        max-width: 350px;
+
+        margin: 10px auto !important;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* Dashboard */
+
+    .dash_board {
+        width: 92%;
+
+        margin-top: 35px;
+    }
+
+
+    .dash_board > h1 {
+        font-size: 27px;
+
+        margin: 35px 0 22px;
+    }
+
+
+    /* Search */
+
+    .search-section {
+        padding: 22px 17px;
+
+        border-radius: 13px;
+    }
+
+
+    .search-section form {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .search-section input {
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+
+    .search-section button {
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+
+    /* Available courses */
+
+    .available-courses > h2 {
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .course-card {
+        padding: 23px 18px;
+
+        border-radius: 13px;
+    }
+
+
+    .course-card h3 {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+
+    .course-card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .course-card > a {
+        width: 100%;
+    }
+
+
+    /* Picked courses */
+
+    .dash_board > h2 {
+        font-size: 25px;
+
+        margin-top: 45px;
+    }
+
+
+    .picked_course {
+        padding: 23px 18px;
+
+        border-radius: 13px;
+    }
+
+
+    .picked_course h3 {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+
+    .picked_course p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .remove_course {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+}
+

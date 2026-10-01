@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}SCOPEINDIA- Contact page{% endblock %}
+
+{% block content %}
+  
+    <section class="contact_section">
+        <h1 >SCOPE INDIA Locations & Contact Details</h1>
+        <h2 >Center for Advanced Data Science with GenAI, Data Analytics, DevOps, Software, Networking, and Cloud Education</h2>
+        <h3 >One of India's best Training destinations for Advanced Data Science with GenAI, Data Analytics, Software, Networking, DevOps, and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+    </section>
+
+    <section>
+        <div id="contact">
+            <h4>SCOPE INDIA Trivandrum, Kerala</h4>
+            <address>TC 25/1403/3, Athens Plaza, SS Kovil Road, Thampanoor, Trivandrum, Kerala 695001</address>
+            <a class="footer_links" href="tel:+919745936073" title="Call SCOPE INDIA Thampanoor, Trivandrum, Kerala +919745936073">9745936073</a>
+            <a class="footer_links" href="mailto:info@scopeindia.org" title="Email SCOPE INDIA Thampanoor, Trivandrum, Kerala info@scopeindia.org">info@scopeindia.org</a>
+            <a class="footer_links" href="https://g.page/r/CXbW6SZGeJPfEAE" title="SCOPE INDIA Google Map Location to Trivandrum, Kerala" target="_blank">Location Route Map</a>
+        </div>
+    </section>
+
+    <section>
+
+        <h1>Contact Us</h1>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="Submit">Send Email</button>
+        </form>
+
+    </section>
+
+
+{% endblock %}
