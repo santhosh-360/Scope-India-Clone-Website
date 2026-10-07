@@ -139,6 +139,158 @@ header nav a:hover{
     text-decoration: underline;
 }
 
+/* =====================================================
+   MOBILE HAMBURGER MENU
+   ===================================================== */
+
+.mobile-menu-btn {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Prevent horizontal overflow */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* HEADER */
+
+    header {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        box-sizing: border-box;
+
+        position: relative;
+    }
+
+
+    /* LOGO */
+
+    #logo {
+        max-width: 140px;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* HAMBURGER BUTTON */
+
+    .mobile-menu-btn {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 45px;
+        height: 45px;
+
+        margin: 10px auto;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        color: white;
+
+        font-size: 28px;
+
+        cursor: pointer;
+    }
+
+
+    /* NAVIGATION CLOSED */
+
+    header nav {
+
+        display: none;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 10px 0 !important;
+
+        box-sizing: border-box;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+    }
+
+
+    /* NAVIGATION OPEN */
+
+    header nav.mobile-menu-open {
+
+        display: flex;
+    }
+
+
+    /* MENU LINKS */
+
+    header nav a {
+
+        width: 100% !important;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        padding: 12px 10px !important;
+
+        margin: 0 !important;
+
+        font-size: 15px;
+
+        display: block;
+
+        white-space: normal;
+    }
+
+
+    /* Make sure content starts AFTER header */
+
+    main,
+    section {
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Images cannot overflow */
+
+    img {
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+}
+
 
 /* =====================================================
    RESPONSIVE MOBILE VIEW

@@ -1,73 +1,251 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}SCOPE INDIA{% endblock%}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}SCOPE INDIA{% endblock %}
+    </title>
+
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
+
 <body>
 
-    <header>
-        <div><img id="logo" src="{% static 'images/scopeindia-logo.webp' %}" alt="SCOPE INDIA Logo"></div>
-        <nav>
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'courses' %}">Courses</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'contact' %}">Contact</a>
-            <a href="{% url 'registartion' %}">Registration</a>
-            
-            {% if request.session.student_id %}
-        <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+    <!-- ================= HEADER ================= -->
 
-    {% if request.session.student_id %}
-        <a href="{% url 'student_dashboard' %}">Student Dashboard</a>
-    {% endif %}
+    <header>
+
+        <!-- LOGO -->
+
+        <div>
+            <img id="logo"
+                 src="{% static 'images/scopeindia-logo.webp' %}"
+                 alt="SCOPE INDIA Logo">
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav id="mainNav">
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'courses' %}">
+                Courses
+            </a>
+
+            <a href="{% url 'about' %}">
+                About
+            </a>
+
+            <a href="{% url 'contact' %}">
+                Contact
+            </a>
+
+            <a href="{% url 'registartion' %}">
+                Registration
+            </a>
+
+
+            {% if request.session.student_id %}
+
+                <a href="{% url 'logout' %}">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'login' %}">
+                    Login
+                </a>
+
+            {% endif %}
+
+
+            {% if request.session.student_id %}
+
+                <a href="{% url 'student_dashboard' %}">
+                    Student Dashboard
+                </a>
+
+            {% endif %}
 
         </nav>
 
     </header>
 
-    
 
+    <!-- ================= PAGE CONTENT ================= -->
 
     {% block content %}
     {% endblock %}
 
-    <!-- FOOTER -->
 
-<footer class="section_footer">
+    <!-- ================= FOOTER ================= -->
 
-    <p class="footer_location">
-        We are located at Technopark TVM | Thampanoor TVM |
-        Kochi, Kerala | Nagercoil, Tamil Nadu
-    </p>
+    <footer class="section_footer">
 
-
-    <p class="footer_contact">
-        <span>9745936073 (TPK)</span>
-        <span>9745936073 (TVM)</span>
-        <span>7592939481 (EKM)</span>
-        <span>8075536185 (NGL)</span>
-        <span>info@scopeindia.org</span>
-    </p>
+        <p class="footer_location">
+            We are located at Technopark TVM |
+            Thampanoor TVM |
+            Kochi, Kerala |
+            Nagercoil, Tamil Nadu
+        </p>
 
 
-    <p class="footer_line">
-        All Rights Reserved
-        <span>SCOPE INDIA &amp; SUFFIX E SOLUTIONS PRIVATE LIMITED</span>
-        © 2007–2026
-        <span>|</span>
-        <a href="#">Privacy Policy</a>
-        <span>|</span>
-        <a href="#">Blog</a>
-    </p>
+        <p class="footer_contact">
 
-</footer>
+            <span>9745936073 (TPK)</span>
+
+            <span>9745936073 (TVM)</span>
+
+            <span>7592939481 (EKM)</span>
+
+            <span>8075536185 (NGL)</span>
+
+            <span>info@scopeindia.org</span>
+
+        </p>
+
+
+        <p class="footer_line">
+
+            All Rights Reserved
+
+            <span>
+                SCOPE INDIA &amp; SUFFIX E SOLUTIONS PRIVATE LIMITED
+            </span>
+
+            © 2007–2026
+
+            <span>|</span>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+            <a href="#">
+                Blog
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <!-- ================= MOBILE MENU JAVASCRIPT ================= -->
+
+    <script>
+
+        const menuButton =
+            document.getElementById("mobileMenuBtn");
+
+        const mainNav =
+            document.getElementById("mainNav");
+
+
+        menuButton.addEventListener("click", function () {
+
+            mainNav.classList.toggle("mobile-menu-open");
+
+
+            const icon =
+                menuButton.querySelector("i");
+
+
+            if (
+                mainNav.classList.contains(
+                    "mobile-menu-open"
+                )
+            ) {
+
+                /* Change hamburger to X */
+
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                /* Change X back to hamburger */
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        /* Close menu after clicking a link */
+
+        const navLinks =
+            mainNav.querySelectorAll("a");
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.remove(
+                        "mobile-menu-open"
+                    );
+
+
+                    const icon =
+                        menuButton.querySelector("i");
+
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
 
 </body>
+
 </html>
